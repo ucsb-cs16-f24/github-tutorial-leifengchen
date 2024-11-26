@@ -30,7 +30,11 @@ int main() {
             cout << "Result: " << result << endl;
             break;
         case '/':
-            result = num1 / num2;  // No check for dividing by 0
+            if(num2 == 0) {
+                cerr << "Error: Division by 0!\n";
+                exit(1);
+            }
+            result = num1 / num2; 
             cout << "Result: " << result << endl;
             break;
         default:
